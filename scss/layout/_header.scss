@@ -1,4 +1,5 @@
 header {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,16 +13,119 @@ header {
         display: flex;
         align-items: center;
         gap: 24px;
+        @media screen and (max-width:425px) {
+        
+            display: none;
+            
+        }
     }
 
     li {
         font-weight: 400;
         font-size: 16px;
         color: #000;
+        transition: .3s;
         &.choosen {
             color: #8842f0;
             border-bottom: 1px solid #8842f0;
             margin-inline: -1px;
         }
     }
+    :hover {
+        color: #8842f0;
+    } 
+    @media screen and (max-width:990px) {
+
+        h1 {
+            display: none;
+        }
+        
+    }
+
+    @media screen and (max-width:688px) {
+        
+        justify-content: center;
+        
+    }
+    @media screen and (max-width:425px) {
+
+        display: inline-block;
+    }
 }
+
+#menu_opener {
+    display: none;
+    @media screen and (max-width:425px) {
+        
+        display: block;
+        float: right;
+    }
+    &__toggle {
+        opacity: 0;
+    }
+}
+#menu__toggle {
+    display: none;
+  }
+
+#menu_closer {
+    position: relative;
+    top: -40px;
+    left: -103px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition: 0.3s;
+    z-index: 4;
+  }
+  
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    transition: 0.3s;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+        &.choosen {
+            color: #8842f0;
+            border-bottom: 1px solid #8842f0;
+            margin-inline: 90px;
+        }
+    
+  }
+.menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  

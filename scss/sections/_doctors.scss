@@ -1,1 +1,75 @@
+.doctors {
+    margin-top: 111px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    h1 {
+        font-weight: 700;
+        font-size: 48px;
+        color: #262626;
+    }
+    p {
+        margin-top: 70px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        color: #262626;
+        max-width: 837px;
+    }
+    &__items {
+        margin-top: 123px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 27px;
+        &__item {
+            background: #f9f1fe;
+            border-radius: 20px;
+            padding: 44px 38px 43px 39px;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            &__title {
+                display: flex;
+                align-items: center;
+                &__image {
+                    max-width: 63px;
+                    img {
+                        max-width: 100%;
+                        border-radius: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &__text {
+                    margin-left: 13px;
+                    h4 {
+                        font-weight: 600;
+                        font-size: 19px;
+                        color: #262626;
+                    }
+                    h6 {
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #575757;
+                        margin-top: 3px;
+                    }
+                }
+            }
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                color: #575757;
+                max-width: 293px;
+                margin-top: 25px;
+                margin-bottom: 39px;
+            }
+        }
 
+        @media screen and (max-width:1173px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

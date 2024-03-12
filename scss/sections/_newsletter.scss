@@ -1,0 +1,26 @@
+.newsletter {
+    margin-bottom: 130px;
+    margin-top: 130px;
+    background: #000;
+    border-radius: 10px;
+    padding: 80px 221px 80px 220px;
+    h1 {
+        font-weight: 700;
+        font-size: 36px;
+        color: #fff;
+        text-align: center;
+        padding-bottom: 47px;
+    }
+    @media screen and (max-width:845px) {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    @media screen and (max-width:325px) {
+        h1 {
+            font-size: 27px;
+            padding-bottom: 0px;
+        }
+    }
+}
