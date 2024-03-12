@@ -1,0 +1,13 @@
+.hero-carousel {
+  max-width: 1170px;
+  overflow: hidden;
+  &__container__item {
+    overflow: hidden;
+    img {
+      width: 1170px;
+      height: 570px;
+      overflow: hidden;
+      border-radius: 8px; // Optional: Add border-radius for rounded corners
+    }
+  }
+}

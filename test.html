@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Carousel with SwiperJS</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    .hero-carousel {
+      max-width: 1170px;
+      margin: auto;
+      overflow: hidden;
+
+      &__container__item {
+        max-width: 1170px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Carousel Container -->
+  <div class="hero-carousel swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides with Images -->
+      <div class="swiper-slide">
+        <div class="hero-carousel__container__item">
+          <img src="img/carousel-item-1.png" alt="carousel-item-1">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-carousel__container__item">
+          <img src="img/carousel-item-2.jpg" alt="carousel-item-2">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-carousel__container__item">
+          <img src="img/carousel-item-3.jpg" alt="carousel-item-3">
+        </div>
+      </div>
+      <!-- Add more slides with images as needed -->
+    </div>
+    <!-- If we need pagination -->
+    <div class="hero-carousel__pagination swiper-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize Swiper
+      var swiper = new Swiper('.hero-carousel', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+          el: '.hero-carousel__pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    });
+  </script>
+
+</body>
+</html>

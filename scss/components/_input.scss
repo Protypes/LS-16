@@ -1,0 +1,25 @@
+.search-field {
+    display: flex;
+    input {
+        border-radius: 50px;
+        width: 278px;
+        height: 43px;
+        background: #000;
+        padding: 11px 0px 12px 18px;
+        border: none;
+        color: #fff;
+    }
+    ::placeholder {
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    button {
+        position: relative;
+        left: -42px;
+        background-color: black;
+        border: none;
+    }
+
+}
