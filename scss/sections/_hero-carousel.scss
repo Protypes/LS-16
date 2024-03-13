@@ -9,12 +9,15 @@
     img {
       float: left;
       width: 100%;
-      min-height: 30em;
+      height: 100%;
       object-fit: cover;
       overflow: hidden;
       border-radius: 30px;
     }
   }
+  @media screen and (max-width: 425px) {
+    display: none;
+}
 }
 
 .hero-carousel {
