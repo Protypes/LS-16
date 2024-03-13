@@ -625,10 +625,15 @@ main {
 .swiper-slide img {
   float: left;
   width: 100%;
-  min-height: 30em;
+  height: 100%;
   object-fit: cover;
   overflow: hidden;
   border-radius: 30px;
+}
+@media screen and (max-width: 425px) {
+  .swiper {
+    display: none;
+  }
 }
 
 .hero-carousel {
@@ -684,6 +689,11 @@ main {
   flex-direction: column;
   text-align: center;
   align-items: center;
+}
+@media screen and (max-width: 425px) {
+  .services {
+    margin-top: 0px;
+  }
 }
 .services h1 {
   font-family: var(--font-family);
